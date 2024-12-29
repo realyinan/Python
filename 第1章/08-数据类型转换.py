@@ -14,10 +14,10 @@
 print(chr(65))
 print(chr(128512))
 print(chr(19990))
-print(ord('楠'))
-print(ord('🤓'))
 print(chr(129299))
 
+print(ord('楠'))
+print(ord('🤓'))
 print('*'*8)
 
 print(hex(15))
@@ -28,5 +28,4 @@ print('*'*8)
 print(eval('1+2'))
 s = 'hello'
 print(repr(int))
-print(s)
 print(complex(2, 3))
