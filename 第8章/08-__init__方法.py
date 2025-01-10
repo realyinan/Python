@@ -11,3 +11,5 @@ print(p1.age)
 p2 = Person("Jerry", 30)
 print(p2.name)
 print(p2.age)
+
+# 创建对象时, 会自动调用__init__方法
