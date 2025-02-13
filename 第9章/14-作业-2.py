@@ -2,13 +2,11 @@
 import time
 
 def decorator(fn):
-    run_time = None
     def inner(*args, **kwargs):
-        nonlocal run_time
         run_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         fn(*args, **kwargs)
         f = open(f"第9章/日志.log", 'a', encoding='utf-8')
-        f.write(f"{fn.__name__}函数于{run_time}运行.\n")
+        f.write(f"{fn.__name__} 函数于 {run_time} 运行.\n")
         f.close()
     return inner
 
