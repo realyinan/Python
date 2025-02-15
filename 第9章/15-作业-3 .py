@@ -21,3 +21,40 @@
 # 例如：{'math': ["通过", "通过", "不通过", "通过"],'english': ["通过", "不通过", "不通过", "通过"]}
 
 
+def chose_course(func):
+    def inner():
+        courses = {}
+        while True:
+            course = input("请输入科目: ")
+            if course == 'q':
+                break
+            grades = func()
+            courses[course] = grades
+        return courses
+    return inner
+
+def deal_fail(func):
+    def inner():
+        result = func()
+        if isinstance(result, dict):
+            for course in result:
+                result[course] = ["通过" if grade >= 60 else "不通过"  for grade in result[course]]
+        else:
+            result = ["通过" if grade >= 60 else "不通过"  for grade in result]
+        return result
+    return inner
+
+
+@chose_course
+@deal_fail
+def entry_grade():
+    grades = []
+    while True:
+        grade = int(input("请输入成绩: "))
+        if grade == 0:
+            break
+        grades.append(grade)
+    return grades
+
+
+print(entry_grade())
