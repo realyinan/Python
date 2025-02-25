@@ -17,8 +17,12 @@ if __name__ == "__main__":
             recv_data = recv_data.decode('utf-8')
             request_list = recv_data.split(' ', maxsplit=2)
             request_path = request_list[1]
-            print(request_path)
+            # print(request_path)
 
+            # 判断用户请求的URL是否为"/"
+            if request_path == "/":
+                request_path = "/index.html"
+            
             # 根据请求资源路径返回指定页面
             with open("第13章/Source" + request_path, "rb") as f:
                 data = f.read()
@@ -29,7 +33,3 @@ if __name__ == "__main__":
             response_data = (response_line + response_header + "\r\n").encode("utf-8") + data
             new_socket.send(response_data)
             new_socket.close()
-
-
-
-
