@@ -25,7 +25,7 @@ if __name__ == "__main__":
             
             # 根据请求资源路径返回指定页面
             try:
-                with open("第13章/Source" + request_path, "rb") as f:
+                with open("第13章/Source/html" + request_path, "rb") as f:
                     data = f.read()
             except:
                 # 代表文件未找到, 把HTTP响应报文设置为404

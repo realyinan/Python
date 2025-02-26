@@ -20,7 +20,7 @@ if __name__ == "__main__":
             print(request_path)
 
             # 根据请求资源路径返回指定页面
-            with open("第13章/Source" + request_path, "rb") as f:
+            with open("第13章/Source\html" + request_path, "rb") as f:
                 data = f.read()
             # 组装http相应报文
             response_line = "HTTP/1.1 200 OK\r\n"

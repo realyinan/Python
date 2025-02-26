@@ -16,7 +16,7 @@ while True:
 
     print(client_request_data)
 
-    with open(r"第13章\Source\1.jpg", "rb") as f:
+    with open(r"第13章\Source\html\1.jpg", "rb") as f:
         data = f.read()
 
     # 1.响应行
