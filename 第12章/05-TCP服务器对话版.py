@@ -1,6 +1,7 @@
 import socket
 
 tcp_server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 # 设置端口复用
 tcp_server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
 

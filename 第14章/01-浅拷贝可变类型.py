@@ -10,12 +10,12 @@ d = copy.copy(c)
 print(id(x))
 print(id(c))
 print(id(d))
-print('**********')  # id(c)和id(d)值不一样, 说明浅拷贝第1层(最外面一层的数据)
+print('**********')  # id(c)和id(d)值不一样, 说明拷贝了第1层
 
 # 测试id(c[2])和id(a)
 print(id(a))
 print(id(c[2]))
-print(id(d[2]))  # id(c[2])和id(a)值一样, 说明浅拷贝第2层的数据
+print(id(d[2]))  # id(c[2])和id(a)值一样, 说明没有拷贝第二层数据
 
 a[2] = 22
 print(c)
