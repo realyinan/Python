@@ -26,6 +26,9 @@ if __name__ == "__main__":
     p1.start()
     p2.start()
 
+    p1.join()
+    p2.join()
+
     # 打印main进程的pid
     print(os.getpid())
 
