@@ -12,7 +12,6 @@ i = 0
 while i < 5:
     if i == 2:
         print("遇到2退出")
-        i += 1
         break
     print(i)
     i += 1

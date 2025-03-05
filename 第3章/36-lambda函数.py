@@ -40,3 +40,5 @@ print(students)
 
 students.sort(key=lambda x: x['age'], reverse=True)
 print(students)
+
+print(sorted(students, key=lambda x: x["name"]))

@@ -29,7 +29,7 @@ str2 = ' '
 num1 = 5
 print(str1 and num1)
 print(str2 and num1)
-
+print("*"*8)
 # or 短路运算
 print(0 or 1) # 1
 print(1 or 2)

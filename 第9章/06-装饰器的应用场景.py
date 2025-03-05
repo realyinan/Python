@@ -1,4 +1,5 @@
 import time
+
 def get_time(fn):
     def inner():
         start = time.time()
@@ -12,7 +13,7 @@ def get_time(fn):
 @get_time
 def func():
     list1 = []
-    for i in range(10000):
+    for i in range(10000000):
         list1.append(i)
 
 func()
