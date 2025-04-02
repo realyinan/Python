@@ -13,7 +13,7 @@ class GasolineCar(Car):
 
 class ElectricCar(Car):
     def __init__(self, brand, model, color, battery):
-        super().__init__(brand, model, color)
+        super().__init__(brand, model, color)  # 这样可以复用父类的属性初始化代码，避免重复写逻辑。
         self.battery = battery
         
 
